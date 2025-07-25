@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 		title: 'Keerthi K - Full-Stack Developer Portfolio',
 		description:
 			'Explore the portfolio of Keerthi K – Full-Stack Developer and AI/ML enthusiast. Showcasing projects across web development, LLMs, GANs, and scalable systems.',
-		url: 'https://your-domain.com',
+		url: 'https://portfolio-keerthi-k.vercel.app/',
 		siteName: 'Keerthi K - Portfolio',
 		images: [
 			{

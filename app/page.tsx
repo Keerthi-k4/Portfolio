@@ -10,8 +10,8 @@ export default function FullStackPortfolio() {
 	return (
 		<main className="min-h-screen bg-gradient-to-b from-gray-950 to-black text-white">
 			<HeroSection />
-			<ProjectsSection />
 			<EducationSection />
+			<ProjectsSection />
 			<Certificates />
 			<ContactSection />
 

@@ -70,104 +70,62 @@ export default function HeroSection() {
 				</motion.div>
 
 				{/* Tech Cards */}
-				<div className="w-full max-w-5xl mx-auto relative px-2 md:px-4">
+				<div className="w-full max-w-5xl px-4">
 					<motion.div
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						transition={{ delay: 0.3 }}
-						className="bg-gray-900/50 backdrop-blur-sm rounded-lg border border-gray-800 p-4 md:p-8"
+						className="bg-gray-900/50 backdrop-blur-sm rounded-xl border border-gray-800 p-6"
 					>
-						<div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
-							{/* Development */}
-							<motion.div
-								onMouseEnter={() => setSelectedStack('frontend')}
-								onMouseLeave={() => setSelectedStack(null)}
-								whileHover={{ scale: 1.03 }}
-								transition={{ type: 'spring', stiffness: 200, damping: 15 }}
-								className={`p-4 md:p-6 rounded-lg transition-all border-2 ${
-									selectedStack === 'frontend'
-										? 'bg-blue-500/20 border-blue-500/50'
-										: 'bg-gray-800/50 hover:bg-gray-800/70 border-transparent'
-								}`}
-							>
-								<h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-blue-400">Development</h3>
-								<ul className="space-y-2 text-sm text-gray-400">
-									{[
-										'JavaScript (React, Node.js)',
-										'Python (Flask, FastAPI)',
-										'Java (Spring Boot)',
-										'C++ (System Programming & DSA)',
-										'SQL & NoSQL (PostgreSQL, MongoDB, Firebase)',
-										'Docker & Redis (Containers & Caching)',
-									].map((item) => (
-										<li key={item} className="flex items-center gap-2">
-											<div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
-											{item}
-										</li>
-									))}
-								</ul>
-							</motion.div>
-
-							{/* AI/ML */}
-							<motion.div
-								onMouseEnter={() => setSelectedStack('backend')}
-								onMouseLeave={() => setSelectedStack(null)}
-								whileHover={{ scale: 1.03 }}
-								transition={{ type: 'spring', stiffness: 200, damping: 15 }}
-								className={`p-4 md:p-6 rounded-lg transition-all border-2 ${
-									selectedStack === 'backend'
-										? 'bg-purple-500/20 border-purple-500/50'
-										: 'bg-gray-800/50 hover:bg-gray-800/70 border-transparent'
-								}`}
-							>
-								<h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-purple-400">AI / ML</h3>
-								<ul className="space-y-2 text-sm text-gray-400">
-									{[
-										'Python (NumPy, Pandas, Scikit-learn)',
-										'Hugging Face Transformers (NLP)',
-										'FAISS (Vector search, similarity search)',
-										'RAG Systems & Multimodal AI (Text, image fusion)',
-										'Model Evaluation & Prompt Engineering',
-									].map((item) => (
-										<li key={item} className="flex items-center gap-2">
-											<div className="w-1.5 h-1.5 bg-purple-500 rounded-full" />
-											{item}
-										</li>
-									))}
-								</ul>
-							</motion.div>
-
-							{/* DevOps / Tools */}
-							<motion.div
-								onMouseEnter={() => setSelectedStack('devops')}
-								onMouseLeave={() => setSelectedStack(null)}
-								whileHover={{ scale: 1.03 }}
-								transition={{ type: 'spring', stiffness: 200, damping: 15 }}
-								className={`p-4 md:p-6 rounded-lg transition-all border-2 ${
-									selectedStack === 'devops'
-										? 'bg-teal-500/20 border-teal-500/50'
-										: 'bg-gray-800/50 hover:bg-gray-800/70 border-transparent'
-								}`}
-							>
-								<h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-teal-400">Other Tools & Tech</h3>
-								<ul className="space-y-2 text-sm text-gray-400">
-									{[
-										'Git & GitHub / GitLab (Version Control)',
-										'Firebase (Auth, Realtime DB)',
-										'Google Cloud Platform (GCP) / AWS (Cloud Services)',
-										'Jira & Notion (Project Management)',
-										'Postman & Swagger (API Testing)',
-									].map((item) => (
-										<li key={item} className="flex items-center gap-2">
-											<div className="w-1.5 h-1.5 bg-teal-500 rounded-full" />
-											{item}
-										</li>
-									))}
-								</ul>
-							</motion.div>
+						<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+							{/* Frontend/Backend */}
+							{[
+								{
+									id: 'frontend',
+									title: 'Development',
+									color: 'blue',
+									items: ['Python, C++, Java', 'React, Node.js', 'FastAPI, Flask', 'SQL, NoSQL', 'Docker, Redis'],
+								},
+								{
+									id: 'backend',
+									title: 'AI / ML',
+									color: 'purple',
+									items: ['Scikit-learn, NumPy', 'Transformers (HF)', 'Vector Search (FAISS)', 'RAG & Multimodal', 'Prompt Engineering'],
+								},
+								{
+									id: 'devops',
+									title: 'Tools & Infra',
+									color: 'teal',
+									items: ['Git, GitHub/GitLab', 'Firebase, GCP, AWS', 'Postman, Swagger', 'Jira, Notion', 'Docker, Redis'],
+								},
+							].map(({ id, title, color, items }) => (
+								<motion.div
+									key={id}
+									onMouseEnter={() => setSelectedStack(id as typeof selectedStack)}
+									onMouseLeave={() => setSelectedStack(null)}
+									whileHover={{ scale: 1.03 }}
+									transition={{ type: 'spring', stiffness: 200, damping: 15 }}
+									className={`p-4 rounded-lg border-2 transition-all ${
+										selectedStack === id
+											? `bg-${color}-500/20 border-${color}-500/50`
+											: 'bg-gray-800/50 hover:bg-gray-800/70 border-transparent'
+									}`}
+								>
+									<h3 className={`text-lg font-semibold mb-3 text-${color}-400`}>{title}</h3>
+									<ul className="text-sm text-gray-300 space-y-2">
+										{items.map((item) => (
+											<li key={item} className="flex items-center gap-2">
+												<div className={`w-1.5 h-1.5 rounded-full bg-${color}-500`} />
+												{item}
+											</li>
+										))}
+									</ul>
+								</motion.div>
+							))}
 						</div>
 					</motion.div>
 				</div>
+			
 			</div>
 		</section>
 	);

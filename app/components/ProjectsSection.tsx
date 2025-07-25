@@ -26,44 +26,45 @@ export default function ProjectsSection() {
 						<div className="p-8">
 							<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 							<div className="space-y-6">
-								<div>
+							<div>
 								<h3 className="text-2xl font-bold mb-4">FinSage – AI-Powered Finance Assistant</h3>
 								<p className="text-gray-400">
-									A full-stack personal finance platform that provides smart spending insights, predictive budget forecasting, AI-powered categorization, goal tracking, OCR-based receipt logging, and a chat assistant for natural language queries.
+								A full-stack personal finance platform offering smart insights, predictive budgeting, expense categorization, goal tracking, receipt OCR, and a natural language chatbot.
 								</p>
-								</div>
+							</div>
 
-								<div className="grid grid-cols-2 gap-6">
+							<div className="grid grid-cols-2 gap-6">
 								<div>
-									<h4 className="text-sm font-semibold text-blue-400 mb-3">User Experience & Features</h4>
-									<ul className="space-y-2 text-sm text-gray-400">
-									<li>• Real-time Spending Dashboard with category breakdowns</li>
-									<li>• Responsive Web UI built with React and Tailwind CSS</li>
-									<li>• Secure OAuth 2.0 Login for authentication and Gmail parsing</li>
-									<li>• Visual Summaries of spending patterns using Recharts</li>
-									</ul>
-								</div>
-								<div>
-									<h4 className="text-sm font-semibold text-purple-400 mb-3">Backend & AI Intelligence</h4>
-									<ul className="space-y-2 text-sm text-gray-400">
-									<li>• FastAPI + PostgreSQL for scalable APIs</li>
-									<li>• Dockerized Backend & ML Services for modular deployment</li>
-									<li>• Smart Expense Categorization using LLM prompts</li>
-									<li>• Chatbot Assistant for expense queries</li>
-									<li>• Spending Forecasts using time series models</li>
-									</ul>
-								</div>
-								</div>
-
-								<div className="space-y-3">
-								<h4 className="text-sm font-semibold text-teal-400">Key Features</h4>
+								<h4 className="text-sm font-semibold text-blue-400 mb-3">User Experience</h4>
 								<ul className="space-y-2 text-sm text-gray-400">
-									<li>• Gmail-based parser for auto-logging bank transactions</li>
-									<li>• Receipt OCR using Tesseract for extracting expense details</li>
-									<li>• AI Chatbot for natural language queries like “What did I spend on food last week?”</li>
+									<li>• Real-time dashboard with category-wise spending</li>
+									<li>• Responsive UI using React & Tailwind</li>
+									<li>• OAuth 2.0 login with Gmail integration</li>
+									<li>• Visual analytics via Recharts</li>
+								</ul>
+								</div>
+								<div>
+								<h4 className="text-sm font-semibold text-purple-400 mb-3">Tech Stack & Intelligence</h4>
+								<ul className="space-y-2 text-sm text-gray-400">
+									<li>• FastAPI backend with PostgreSQL</li>
+									<li>• Modular Dockerized deployment</li>
+									<li>• LLM-powered expense categorization</li>
+									<li>• Chat assistant for query-based insights</li>
+									<li>• Forecasting via time series models</li>
 								</ul>
 								</div>
 							</div>
+
+							<div className="space-y-3">
+								<h4 className="text-sm font-semibold text-teal-400">Highlights</h4>
+								<ul className="space-y-2 text-sm text-gray-400">
+								<li>• Gmail parser for auto-logging transactions</li>
+								<li>• Tesseract OCR for receipt-based logging</li>
+								<li>• AI queries like “What did I spend on food last week?”</li>
+								</ul>
+							</div>
+							</div>
+
 
 							<div className="bg-black/30 rounded-xl p-6">
 								<h4 className="text-sm font-semibold text-gray-400 mb-4">System Architecture</h4>
@@ -154,8 +155,7 @@ export default function ProjectsSection() {
 										<div>
 											<h3 className="text-2xl font-bold mb-4">Multimodal PDF Q&A System</h3>
 											<p className="text-gray-400">
-												A scalable Retrieval-Augmented Generation (RAG) system integrating text and image understanding for accurate question answering over documents. Built using Sentence-BERT, CLIP, FAISS, and LLaMA with an agentic reasoning pipeline.
-											</p>
+											A scalable RAG system combining text and image understanding for accurate document QA, using Sentence-BERT, CLIP, FAISS, and LLaMA with an agentic reasoning pipeline.											</p>
 										</div>
 
 										<div className="grid grid-cols-2 gap-6">
@@ -265,40 +265,38 @@ export default function ProjectsSection() {
 									<div>
 										<h3 className="text-2xl font-bold mb-4">Yet Another Task Distributor</h3>
 										<p className="text-gray-400">
-											A fault-tolerant distributed task queue system for real-time emergency response across medical, fire, and police services. Built using Python, Kafka, and Redis, it guarantees exactly-once execution, intelligent task routing, and dynamic worker orchestration. Designed for high-urgency workloads with features like heartbeat monitoring, structured logging, and real-time status tracking.
+										A fault-tolerant distributed task queue for emergency services, ensuring exactly-once execution and intelligent routing. Built with Python, Kafka, and Redis, it supports dynamic worker orchestration, heartbeat monitoring, and real-time status tracking.
 										</p>
 									</div>
 
 									<div className="grid grid-cols-2 gap-6">
 										<div>
-											<h4 className="text-sm font-semibold text-blue-400 mb-3">Client-Side Features</h4>
-											<ul className="space-y-2 text-sm text-gray-400">
-												<li>• Unique Task ID generation</li>
-												<li>• Redis-backed task registry for fast status lookup and persistent tracking</li>
-												<li>• Real-time result querying</li>
-												<li>• Simulated emergency call generator for testing real-world load scenarios</li>
-											</ul>
+										<h4 className="text-sm font-semibold text-blue-400 mb-3">Client Features</h4>
+										<ul className="space-y-2 text-sm text-gray-400">
+											<li>• Unique Task ID & Redis-backed status registry</li>
+											<li>• Real-time result querying</li>
+											<li>• Emergency call simulator for load testing</li>
+										</ul>
 										</div>
 										<div>
-											<h4 className="text-sm font-semibold text-purple-400 mb-3">Worker-Side Support</h4>
-											<ul className="space-y-2 text-sm text-gray-400">
-												<li>• Kafka consumer groups for balanced task distribution</li>
-												<li>• Heartbeat-based worker monitoring</li>
-												<li>• Structured status updates (queued, processing, success, failure)</li>
-												<li>• Smart auto-retries on failure</li>
-											</ul>
+										<h4 className="text-sm font-semibold text-purple-400 mb-3">Worker Features</h4>
+										<ul className="space-y-2 text-sm text-gray-400">
+											<li>• Kafka consumer groups for load balancing</li>
+											<li>• Heartbeat monitoring & smart retries</li>
+											<li>• Structured status updates</li>
+										</ul>
 										</div>
 									</div>
 
 									<div className="space-y-3">
 										<h4 className="text-sm font-semibold text-teal-400">System Highlights</h4>
 										<ul className="space-y-2 text-sm text-gray-400">
-											<li>• Supports exactly-once task execution guarantees</li>
-											<li>• Redis-based low-latency result caching</li>
-											<li>• Autoscaling with dynamic load redistribution</li>
+										<li>• Exactly-once execution guarantee</li>
+										<li>• Redis-based low-latency result caching</li>
+										<li>• Autoscaling with dynamic load handling</li>
 										</ul>
 									</div>
-								</div>
+									</div>
 
 								<div className="bg-black/30 rounded-xl p-6">
 									<h4 className="text-sm font-semibold text-gray-400 mb-4">Architecture Overview</h4>
@@ -362,41 +360,40 @@ export default function ProjectsSection() {
 									<div>
 										<h3 className="text-2xl font-bold mb-4">Smart Diet & Fitness Planner</h3>
 										<p className="text-gray-400">
-											A cross-platform app built with Flutter and FastAPI, offering AI-powered meal recommendations based on user activity, food intake, and biometrics. Combines Firebase Auth, Google Calendar integration, and on-device ML to provide automated, privacy-preserving tracking with minimal user input. Backed by a curated Indian and global nutrition database.
+										A cross-platform app (Flutter + FastAPI) that offers AI-driven meal recommendations based on activity, intake, and biometrics. Uses Firebase Auth, Google Calendar, and on-device ML for private, low-effort tracking backed by an Indian/global nutrition DB.
 										</p>
 									</div>
 
 									<div className="grid grid-cols-2 gap-6">
 										<div>
-											<h4 className="text-sm font-semibold text-green-400 mb-3">Food Logging</h4>
-											<ul className="space-y-2 text-sm text-gray-400">
-												<li>• Google OAuth 2.0–based login</li>
-												<li>• ML-based food recognition using MobileNetV2</li>
-												<li>• QR code & manual logging</li>
-												<li>• Daily calorie & macro tracker</li>
-											</ul>
+										<h4 className="text-sm font-semibold text-green-400 mb-3">Logging & Tracking</h4>
+										<ul className="space-y-2 text-sm text-gray-400">
+											<li>• Google OAuth login</li>
+											<li>• Food recognition via MobileNetV2</li>
+											<li>• QR code & manual logging</li>
+											<li>• Daily calorie & macro tracker</li>
+										</ul>
 										</div>
 										<div>
-											<h4 className="text-sm font-semibold text-purple-400 mb-3">Smart Recommendations</h4>
-											<ul className="space-y-2 text-sm text-gray-400">
-												<li>• Suggests meals based on past logs</li>
-												<li>• Adaptive planning based on step/activity data</li>
-												<li>• Integrated with Google Calendar for reminders</li>
-												<li>• Explainable AI using rule-based & collaborative filtering</li>
-											</ul>
+										<h4 className="text-sm font-semibold text-purple-400 mb-3">Smart Recommendations</h4>
+										<ul className="space-y-2 text-sm text-gray-400">
+											<li>• Meal suggestions from intake/activity data</li>
+											<li>• Adaptive plans + Google Calendar reminders</li>
+											<li>• Explainable AI via rules & collaborative filtering</li>
+										</ul>
 										</div>
 									</div>
 
 									<div className="space-y-3">
 										<h4 className="text-sm font-semibold text-teal-400">System Highlights</h4>
 										<ul className="space-y-2 text-sm text-gray-400">
-											<li>• Offline-first logging via SQLite, weekly sync to Firestore</li>
-											<li>• Modular FastAPI backend with food intelligence APIs</li>
-											<li>• MobileNetV2 model for Indian/global dish recognition</li>
-											<li>• Real-time feedback & prompts via smartwatch</li>
+										<li>• Offline-first logging with SQLite + Firestore sync</li>
+										<li>• Modular FastAPI backend & ML APIs</li>
+										<li>• Smartwatch integration for real-time prompts</li>
 										</ul>
 									</div>
-								</div>
+									</div>
+
 
 								<div className="bg-black/30 rounded-xl p-6">
 									<svg className="w-full h-full" viewBox="0 0 500 460">
